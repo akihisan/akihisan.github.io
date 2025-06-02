@@ -1,0 +1,43 @@
+body {
+  color: black;
+  background-color: #5FAD56;
+  font-family: "Verdana", "Arial", sans-serif;
+  /*Hintergrundbild das sich vertikal wiederholt*/
+  /*background-image: url("../images/BackgroundLong.svg");
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center top;*/
+  margin: 0; /*verhindert weißen Rand*/
+}
+
+h1 {
+  color: #B4436C;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: #B4436C;
+  font-size: 6rem;
+}
+
+h2{
+  color: #B4436C;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+  margin: 0;
+}
+
+a:link {
+  color: #FCA17D;
+}
+
+a:visited {
+  color: #F2C14E;
+}
+
+a:hover {
+  color: #F2C14E;
+}
+
+a:active {
+  color: #F2C14E;
+}
