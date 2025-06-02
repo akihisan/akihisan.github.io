@@ -18,9 +18,11 @@
 }
 
 .button-style {
-    background-color: #9a348e;
+    background-color: #F78154;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     border: none;
-    color: #f9dbbd;
+    border-radius: 5px;
     padding: 0rem 2rem;
     height: 8rem;
     line-height: 5rem;
@@ -33,11 +35,38 @@
     cursor: pointer;
     border-radius: 10px;
     transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
 .button-style:hover {
-    transform: scale(1.1);
-    background-color: #da627d;
+    transform: scale(1.05);
+    background-color: #F2C14E;
 }
 .button-style:active {
+    transform: scale(0.95);
+}
+
+.arrow-button {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    background-color: #F78154;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.arrow-button img {
+    width: 2rem;
+    height: 2rem;
+}
+.arrow-button:hover {
+    transform: scale(1.05);
+    background-color: #F2C14E;
+}
+.arrow-button:active {
     transform: scale(0.95);
 }

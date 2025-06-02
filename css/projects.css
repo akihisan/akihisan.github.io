@@ -83,3 +83,19 @@
     width: 100%;
     height: 10%;
 }
+
+a:link {
+  color: #F2C14E;
+}
+
+a:visited {
+  color: #F2C14E;
+}
+
+a:hover {
+  color: #FCA17D;
+}
+
+a:active {
+  color: #F2C14E;
+}
