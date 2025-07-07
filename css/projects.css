@@ -44,7 +44,6 @@
     width: 3rem;
     height: 3rem;
     margin: 0.5rem;
-    /*background-color: #F78154;*/
     background-color: #F2C14E;
     border: none;
     border-radius: 5px;
@@ -61,7 +60,6 @@
 }
 .arrow-button:hover {
     transform: scale(1.05);
-    /*background-color: #F2C14E;*/
     background-color: black;
 }
 .arrow-button:active {
