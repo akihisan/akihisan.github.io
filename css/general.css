@@ -1,6 +1,6 @@
 body {
   color: black;
-  background-color: #5FAD56;
+  background-color: #498b42;
   font-family: "Verdana", "Arial", sans-serif;
   /*Hintergrundbild das sich vertikal wiederholt*/
   /*background-image: url("../images/BackgroundLong.svg");
@@ -11,18 +11,68 @@ body {
 }
 
 h1 {
-  color: #F78154;
+  color: black;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   text-align: center;
   text-decoration-line: underline;
   text-decoration-color: #F2C14E;
-  font-size: 6rem;
+  font-size: 4rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 h2{
-  color: #F78154;
+  /*color: #F78154;*/
+  color: black;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   font-size: 2rem;
   margin: 0;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: #F2C14E solid 2px;
+  height: 30px;
+  gap: 10px;
+}
+
+.button-style {
+  background-color: black;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 0rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.button-style:hover {
+  transform: scale(1.05);
+  background-color: #F2C14E;
+  color: white;
+}
+.button-style:active {
+  transform: scale(0.95);
+}
+
+a:link {
+  color: #F2C14E;
+}
+a:visited {
+  color: #F2C14E;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: #F2C14E;
 }
 
