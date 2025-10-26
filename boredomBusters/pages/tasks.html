@@ -1,0 +1,378 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/generalB.css" />
+        <link rel="stylesheet" href="../css/tasks.css" />
+        <title>Bordedom Busters</title>
+        <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="grid">
+            <div class="left"> 
+                <img id="mc-img" src="../images/NewMC1.png" width="100%" height="auto"/>
+                <div class="level">
+                    <div class="level-bar">
+                        <div class="level-bar-fill" id="levelBar"></div>
+                    </div>
+                    <p id="level"></p>
+                </div>
+                <div class="button-box">
+                    <a href="tasks.html" class="button-style">Aufgaben</a>
+                    <a href="clothes.html" class="button-style">Kleiderschrank</a>
+                    <a href="items.html" class="button-style">Items</a>
+                    <a id="homeButton" href="home.html" class="button-style">Home
+                        <img id="exclamation" src="../images/Ausrufezeichen1.png" class="exclamation"/>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <div id="taskList" class="task-list"></div>
+                <div class="gifts">
+                    <!-- Geschenk-svg -->
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" stroke="#000000" id="gift1">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path opacity="0.1" d="M4 12.5V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12.5C20 12.2239 19.7761 12 19.5 12H4.5C4.22386 12 4 12.2239 4 12.5Z" fill="#000000"></path> 
+                            <path d="M3 9.5C3 9.03534 3 8.80302 3.03843 8.60982C3.19624 7.81644 3.81644 7.19624 4.60982 7.03843C4.80302 7 5.03534 7 5.5 7H12H18.5C18.9647 7 19.197 7 19.3902 7.03843C20.1836 7.19624 20.8038 7.81644 20.9616 8.60982C21 8.80302 21 9.03534 21 9.5V9.5V9.5C21 9.96466 21 10.197 20.9616 10.3902C20.8038 11.1836 20.1836 11.8038 19.3902 11.9616C19.197 12 18.9647 12 18.5 12H12H5.5C5.03534 12 4.80302 12 4.60982 11.9616C3.81644 11.8038 3.19624 11.1836 3.03843 10.3902C3 10.197 3 9.96466 3 9.5V9.5V9.5Z" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path> 
+                            <path d="M4 12V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 7V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.3753 6.21913L9.3959 3.74487C8.65125 2.81406 7.26102 2.73898 6.41813 3.58187C5.1582 4.8418 6.04662 7 7.82843 7L11 7C11.403 7 11.6271 6.53383 11.3753 6.21913Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                            <path d="M12.6247 6.21913L14.6041 3.74487C15.3488 2.81406 16.739 2.73898 17.5819 3.58187C18.8418 4.8418 17.9534 7 16.1716 7L13 7C12.597 7 12.3729 6.53383 12.6247 6.21913Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                        </g>
+                    </svg>
+                    <!-- Geschenk-svg -->
+                    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" stroke="#000000" id="gift2">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path opacity="0.1" d="M4 12.5V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12.5C20 12.2239 19.7761 12 19.5 12H4.5C4.22386 12 4 12.2239 4 12.5Z" fill="#000000"></path> 
+                            <path d="M3 9.5C3 9.03534 3 8.80302 3.03843 8.60982C3.19624 7.81644 3.81644 7.19624 4.60982 7.03843C4.80302 7 5.03534 7 5.5 7H12H18.5C18.9647 7 19.197 7 19.3902 7.03843C20.1836 7.19624 20.8038 7.81644 20.9616 8.60982C21 8.80302 21 9.03534 21 9.5V9.5V9.5C21 9.96466 21 10.197 20.9616 10.3902C20.8038 11.1836 20.1836 11.8038 19.3902 11.9616C19.197 12 18.9647 12 18.5 12H12H5.5C5.03534 12 4.80302 12 4.60982 11.9616C3.81644 11.8038 3.19624 11.1836 3.03843 10.3902C3 10.197 3 9.96466 3 9.5V9.5V9.5Z" stroke="#000000" stroke-width="2" stroke-linejoin="round"></path> 
+                            <path d="M4 12V16C4 17.8856 4 18.8284 4.58579 19.4142C5.17157 20 6.11438 20 8 20H9H15H16C17.8856 20 18.8284 20 19.4142 19.4142C20 18.8284 20 17.8856 20 16V12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 7V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.3753 6.21913L9.3959 3.74487C8.65125 2.81406 7.26102 2.73898 6.41813 3.58187C5.1582 4.8418 6.04662 7 7.82843 7L11 7C11.403 7 11.6271 6.53383 11.3753 6.21913Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                            <path d="M12.6247 6.21913L14.6041 3.74487C15.3488 2.81406 16.739 2.73898 17.5819 3.58187C18.8418 4.8418 17.9534 7 16.1716 7L13 7C12.597 7 12.3729 6.53383 12.6247 6.21913Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                        </g>
+                    </svg>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div id="hatPopup" class="popup">
+                    <div class="popup-content" id="hatContent">
+                        <h2>Level Up!</h2>
+                        <p id="hatText"></p>
+                        <div class="portrait-frame">
+                            <img id="hatImg" src="../images/items/empty.png"/>
+                        </div>
+                        <button onclick="closePopup('hatPopup')" class="button-style">Bestätigen</button>
+                    </div>
+                </div>
+                <div id="itemPopup" class="popup">
+                    <div class="popup-content" id="content">
+                        <p id="rewardText">Schnapp dir deine Belohnung!</p>
+                        <button id="closeButton" onclick="closePopup('itemPopup')" class="button-style">Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            //localStorage.clear();
+            
+            async function loadTasks() {
+                const today = new Date().toISOString().slice(0, 10); // z. B. "2025-04-16"
+                const storedData = JSON.parse(localStorage.getItem("tasks"));
+
+                if(storedData && storedData.date == today){
+                    showTasks(storedData.taskArray);
+                }else {
+                    try {
+                        // Daten von tasks.txt laden
+                        const response = await fetch("tasks.txt");
+                        const text = await response.text();
+
+                        // In ein Array umwandeln
+                        const tasks = text.trim().split('\n');
+
+                        // Zufällig mischen
+                        const mix = tasks.sort(() => 0.5 - Math.random());
+
+                        // Die ersten 5 ohne Wiederholung nehmen
+                        const firstFive = mix.slice(0, 5);
+
+                        // Speichern für heute
+                        localStorage.setItem("tasks", JSON.stringify({
+                        date: today,
+                        taskArray: firstFive,
+                        progress: 0,
+                        done: Array(firstFive.length).fill(false)
+                        }));
+
+                        showTasks(firstFive);
+                    } catch (error) {
+                        console.error('Fehler beim Laden der Aufgaben:', error);
+                    }
+                }
+                //aktuellen Progress auslesen und als Leiste anzeigen
+                progressBar();
+                
+            }
+
+            function showTasks(taskArray) {
+                const list = document.getElementById("taskList");
+                list.innerHTML = ''; // vorherige Liste löschen
+
+                // aus jeder Aufgabe einen Button in eine Box setzen
+                taskArray.forEach((task, i) => {
+                    // Container erstellen, um den Button hinein zu setzen
+                    const taskContainer = document.createElement("div");
+                    taskContainer.classList.add("task-container"); 
+
+                    // Zufällige Drehung für jede Box (zwischen -5 und 5 Grad)
+                    const randomRotation = Math.floor(Math.random() * 11) - 5; // Werte von -5 bis 5 Grad
+                    taskContainer.style.transform = `rotate(${randomRotation}deg)`; // Zuweisung der zufälligen Drehung
+
+                    // Titel für jede Aufgabe
+                    const taskTitle = document.createElement("h3");
+                    taskTitle.textContent = `Aufgabe ${i + 1}`;
+
+                    // Text für die Aufgabe
+                    const taskDescription = document.createElement("p");
+                    taskDescription.textContent = task;
+                    // Button erstellen
+                    const button = document.createElement("button");
+                    button.textContent = "Geschafft!";
+                    button.classList.add("button-style");
+                    button.style.marginTop = "100px";
+                    taskContainer.appendChild(button);
+
+                    // Wenn die Aufgabe schon erledigt wurde: Button deaktivieren
+                    const done = JSON.parse(localStorage.getItem("tasks")).done;
+                    if (done[i]) {
+                        button.disabled = true;
+                        button.classList.add("disabled");
+
+                        const xOverlay = document.createElement("div");
+                        xOverlay.classList.add("x-overlay");
+                        xOverlay.textContent = "❌";
+                        taskContainer.appendChild(xOverlay);
+                    }
+
+                    // Event Listener für den Button, der die Aufgabe als erledigt markiert
+                    button.addEventListener("click", () => taskDone(i));
+
+                    // Alle Elemente in den Container einfügen
+                    taskContainer.appendChild(taskTitle);
+                    taskContainer.appendChild(taskDescription);
+                    taskContainer.appendChild(button);
+
+                    // Die Box zum Listen-Container hinzufügen
+                    list.appendChild(taskContainer);
+                });
+            }
+
+            loadTasks();
+
+            function taskDone(i){
+                const storedData = JSON.parse(localStorage.getItem("tasks"));
+                if(storedData){
+                    if(!storedData.done[i]){
+                        //aktuellen Progress auslesen und um eins erhöhen
+                        storedData.progress++;
+                        storedData.done[i] = true;
+                        localStorage.setItem("tasks", JSON.stringify(storedData));
+
+                        //Fortschrittsleiste aktualisieren
+                        progressBar();
+
+                        //XP erhöhen und anzeigen
+                        const levelData = JSON.parse(localStorage.getItem("level"));
+                        if(!levelData.boss){levelData.current += 5;}
+                        localStorage.setItem("level", JSON.stringify(levelData));
+                        levelBar(levelData);
+
+                        checkLevelUp(levelData);
+
+                        //geklickten Button deaktivieren
+                        event.target.disabled = true;
+
+                        // Komisch großes X hinzufügen
+                        const xOverlay = document.createElement("div");
+                        xOverlay.classList.add("x-overlay");
+                        xOverlay.textContent = "❌";
+                        event.target.parentElement.appendChild(xOverlay);
+
+                        // Container grau machen
+                        event.target.closest('.task-container').classList.add("finished");
+                        event.target.closest('.button-style').classList.add("disabled");
+
+
+
+                        checkWin(storedData.progress, levelData);
+                    }
+                }
+            }
+
+            function progressBar(){
+                //Höhe der ProgressBar anhand des progress in % ausrechnen
+                const bar = document.getElementById("progressBar");
+                const storedData = JSON.parse(localStorage.getItem("tasks"));
+                const value = 20 * storedData.progress;
+                bar.style.height = value + "%";
+            }
+
+            function checkWin(progress, levelData){
+                if(progress == 5){
+                    document.getElementById("closeButton").style.display = "none";
+                    document.getElementById("itemPopup").style.display = "flex";
+                    const p = document.getElementById("content");
+                    const button = document.createElement("button");
+                    button.textContent = "Belohnung";
+                    button.id = "rewardButton";
+                    button.classList.add("button-style");
+                    button.addEventListener("click", () => getReward(1));
+                    p.appendChild(button);
+                }else if(progress == 3){
+                    document.getElementById("closeButton").style.display = "none";
+                    document.getElementById("itemPopup").style.display = "flex";
+                    const p = document.getElementById("content");
+                    const button = document.createElement("button");
+                    button.textContent = "Belohnung";
+                    button.id = "rewardButton";
+                    button.classList.add("button-style");
+                    if(levelData.boss){
+                        button.addEventListener("click", () => getReward(1));
+                    }else{
+                        button.addEventListener("click", () => getReward(2));
+                    }
+                    p.appendChild(button);
+                }else return;   
+            }
+
+            function getReward(a){
+                if(a === 1){
+                    //100% Chance auf Item
+                    getItem();
+                }else{
+                    //10% Chance auf Item, 90% Chance auf XP
+                    if (Math.random() < 0.1) {
+                        getItem();
+                    }else{
+                        //XP erhöhen und anzeigen (nur wenn nicht gerade Boss da ist)
+                        const levelData = JSON.parse(localStorage.getItem("level"));
+                        if(!levelData.boss){levelData.current += 5;}
+                        localStorage.setItem("level", JSON.stringify(levelData));
+                        const levelP = document.getElementById("level");
+                        levelP.textContent = `Level: ${levelData.level}`;
+                        const rewardText = document.getElementById("rewardText");
+                        if (rewardText) {
+                            rewardText.innerText = "Du hast 5XP bekommen!";
+                        }
+                        checkLevelUp(levelData);
+                    }
+                }
+                document.getElementById("closeButton").style.display = "block";
+                document.getElementById("rewardButton").remove();
+            }
+
+            function getItem(){
+                //ein zufällig gewähltes Item erhalten
+                let items = JSON.parse(localStorage.getItem("items"));
+                if (!items || items.length === 0) return;
+                const randomIndex = Math.floor(Math.random() * items.length);
+                const randomItem = items[randomIndex];
+                randomItem.amount += 1;
+                localStorage.setItem("items", JSON.stringify(items));
+
+                //im popup anzeigen, welches item
+                const message = `Du hast 1x "${randomItem.name}" bekommen!`;
+                const rewardText = document.getElementById("rewardText");
+                if (rewardText) {
+                    rewardText.innerText = message;
+                }
+            }
+
+            function closePopup(popupID){
+                const rewardText = document.getElementById("rewardText");
+                if (rewardText) {
+                    rewardText.innerText = "Schnapp dir deine Belohnung!";
+                }
+                document.getElementById(popupID).style.display = "none";
+            }
+
+            const bossFiles = ["FireAlarmEnemy1.png", "PhoneCallEnemy1.png", "SocialMediaEnemy.png"];
+
+            function checkLevelUp(levelData){
+                
+                if(levelData.current >= levelData.goal){
+                    //einen zufällig gewählten Hut erhalten
+                    let hats = JSON.parse(localStorage.getItem("hats"));
+                    if (!hats || hats.length === 0) return;
+                    const randomIndex = Math.floor(Math.random() * hats.length);
+                    const randomItem = hats[randomIndex];
+                    const isNew = !randomItem.inventory;
+                    randomItem.inventory = true;
+                    localStorage.setItem("hats", JSON.stringify(hats));
+
+                    //Popup zur Aholung des Huts anzeigen
+                    document.getElementById("hatPopup").style.display = "flex";
+                    const p = document.getElementById("hatText");
+                    p.textContent = `${randomItem.name}! ${isNew ? "NEU" : ""}`;
+                    const img = document.getElementById("hatImg");
+                    img.src = `../images/hats/${randomItem.file}`;
+
+                    //nächstes Ziel berechnen
+                    const x = Math.floor(levelData.level / 3);
+                    levelData.goal = 10 + x * 5;
+                    levelData.current = 0;
+                    levelData.level++;
+                    //prüfen ob jetzt Boss auftaucht
+                    if(levelData.level % 5 === 0){
+                        levelData.boss = true;
+                        //random boss auswählen
+                        const idx = Math.floor(Math.random() * bossFiles.length);
+                        levelData.bossFile = bossFiles[idx];
+                    }
+                    localStorage.setItem("level", JSON.stringify(levelData));
+                    setup();
+                }
+            }
+
+            function setup(){
+                //aktuelles Level anzeigen
+                const data = JSON.parse(localStorage.getItem("level"));
+                const p = document.getElementById("level");
+                if(data){
+                    p.textContent = `Level: ${data.level}`;
+                }else{
+                    p.textContent = "0 / 10 Level: 0";
+                }
+                levelBar(data);
+
+                //aktuellen Main Character anzeigen
+                let mc = JSON.parse(localStorage.getItem("mc"));
+                const img = document.getElementById("mc-img");
+                if(mc){
+                    img.src = `../images/hats/${mc.file}`;
+                }else{
+                    img.src = "../images/hats/NewMC1.png";
+                }
+
+                //Ausrufezeichen anzeigen wenn Boss da ist
+                if(data.boss){
+                    document.getElementById("exclamation").style.display = "inline-block";
+
+                }else{
+                    document.getElementById("exclamation").style.display = "none";
+                }
+            }
+
+            function levelBar(data){
+                //Beite der LevelBar anhand des Fortschritts im level in % ausrechnen
+                const bar = document.getElementById("levelBar");
+                if(data){
+                    const value = (data.current / data.goal) * 100;
+                    bar.style.width = value + "%";
+                }
+            }
+
+            setup();
+        </script>
+    </body>
+</html>
