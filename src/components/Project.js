@@ -44,12 +44,12 @@ function Project({title, media, children}){
         return (
             item.type == "img" ? 
             <img
-                src={`src/images/${item.src}`}
+                src={`../src/images/${item.src}`}
                 alt="Projekt-Screenshot"
                 className="screenshot"
             /> :
             <video className="screenshot" controls>
-                <source src={`src/videos/${item.src}`} type="video/mp4"/>
+                <source src={`../src/videos/${item.src}`} type="video/mp4"/>
             </video>
         );
     }
@@ -62,13 +62,13 @@ function Project({title, media, children}){
                     className="arrow-button"
                     onclick={() => setIndex(index - 1)}
                 >
-                    <img src="src/images/arrowLeft.svg" />
+                    <img src="../src/images/arrowLeft.svg" />
                 </button>
 
                 {showMedia}
 
                 <button className="arrow-button" onclick={() => setIndex(index + 1)}>
-                    <img src="src/images/arrowRight.svg" />
+                    <img src="../src/images/arrowRight.svg" />
                 </button>
             </div>
             <p>
