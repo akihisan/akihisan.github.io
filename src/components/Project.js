@@ -38,20 +38,11 @@ function Project({title, media, children}){
     });
 
     const [index, setIndex] = useState(0);
+    const [item, setItem] = useState(media[0]);
 
-    function showMedia(){
-        const item = media[index];
-        return (
-            item.type == "img" ? 
-            <img
-                src={`../src/images/${item.src}`}
-                alt="Projekt-Screenshot"
-                className="screenshot"
-            /> :
-            <video className="screenshot" controls>
-                <source src={`../src/videos/${item.src}`} type="video/mp4"/>
-            </video>
-        );
+    function changeMedia(newIndex){
+        setIndex(newIndex);
+        setItem(media[newIndex]);
     }
 
     return(
@@ -60,15 +51,25 @@ function Project({title, media, children}){
             <div className="diashow">
                 <button
                     className="arrow-button"
-                    onclick={() => setIndex(index - 1)}
+                    onClick={() => changeMedia(index - 1)}
                 >
-                    <img src="../src/images/arrowLeft.svg" />
+                    <img src={`${process.env.PUBLIC_URL}/images/arrowLeft.svg`} />
                 </button>
 
-                {showMedia}
+                {item.type == "img" ? 
+                    <img
+                        src={`${process.env.PUBLIC_URL}/images/${item.src}`}
+                        alt="Projekt-Screenshot"
+                        className="screenshot"
+                    />
+                :
+                    <video className="screenshot" controls>
+                        <source src={`${process.env.PUBLIC_URL}/videos/${item.src}`} type="video/mp4"/>
+                    </video>
+                }
 
-                <button className="arrow-button" onclick={() => setIndex(index + 1)}>
-                    <img src="../src/images/arrowRight.svg" />
+                <button className="arrow-button" onClick={() => changeMedia(index + 1)}>
+                    <img src={`${process.env.PUBLIC_URL}/images/arrowRight.svg`} />
                 </button>
             </div>
             <p>
