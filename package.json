@@ -16,6 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:docs": "npm run build && rimraf docs && copyfiles -u 1 \"build/**/*\" docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,6 +39,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "copyfiles": "^2.4.1",
+    "gh-pages": "^6.3.0",
+    "rimraf": "^6.1.2"
   }
 }
