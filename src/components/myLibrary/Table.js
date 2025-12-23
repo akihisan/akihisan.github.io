@@ -4,10 +4,9 @@ function Table() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch("https://portfolio-api.vercel.app/api/books")
+        fetch(`${process.env.PUBLIC_URL}/books.json`)
             .then(res => res.json())
-            .then(setBooks)
-            .catch(console.error);
+            .then(setBooks);
     }, []);
 
     return (
@@ -22,7 +21,7 @@ function Table() {
                 </tr>
             </thead>
             <tbody>
-                {books.map(p => (
+                {books?.map(p => (
                     <tr key={p.id}>
                         <td>{p.title}</td>
                         <td>{p.author}</td>
