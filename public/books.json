@@ -1,3 +1,43 @@
 [
-    {"title": "Warm Bodies", "author": "Isaac Marion", "cover": "https://m.media-amazon.com/images/I/51ctHHvPyXL.jpg", "pages": 298}
+    {
+        "title": "Warm Bodies", 
+        "author": "Isaac Marion", 
+        "cover": "https://m.media-amazon.com/images/I/51ctHHvPyXL.jpg", 
+        "pages": 298
+    },
+    {
+        "title": "Diebe im Olymp", 
+        "author": "Rick Riordan", 
+        "cover": "https://m.media-amazon.com/images/I/819ddql3EWL._SL1500_.jpg", 
+        "pages": 448, 
+        "row": "Percy Jackson"
+    },
+    {
+        "title": "Im Bann des Zyklopen",
+        "author": "Rick Riordan", 
+        "cover": "https://images.wikia.com/olympians/images/8/84/Percy_jackson_02_im_bann_des_zyklopen.jpg",
+        "pages": 336, 
+        "row": "Percy Jackson"
+    },
+    {
+        "title": "Der Fluch des Titanen",
+        "author": "Rick Riordan", 
+        "cover": "https://m.media-amazon.com/images/I/41IX1scrsXL._SY445_SX342_.jpg",
+        "pages": 368, 
+        "row": "Percy Jackson"
+    },
+    {
+        "title": "Die Schlacht um das Labyrinth",
+        "author": "Rick Riordan", 
+        "cover": "https://images2.medimops.eu/product/b2dbed/M03551554390-source.jpg",
+        "pages": 430, 
+        "row": "Percy Jackson"
+    },
+    {
+        "title": "Die letzte Göttin",
+        "author": "Rick Riordan", 
+        "cover": "https://m.media-amazon.com/images/I/51TwIxDTH+L._SY344_BO1,204,203,200_.jpg",
+        "pages": 461, 
+        "row": "Percy Jackson"
+    }
 ]

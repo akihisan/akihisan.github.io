@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../../css/myLibrary/table.css";
 
 function Table() {
     const [books, setBooks] = useState([]);
@@ -10,28 +11,31 @@ function Table() {
     }, []);
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Titel</th>
-                    <th>Autor*innen</th>
-                    <th>Cover</th>
-                    <th>Seiten</th>
-                    <th>Reihe</th>
-                </tr>
-            </thead>
-            <tbody>
-                {books?.map(p => (
-                    <tr key={p.id}>
-                        <td>{p.title}</td>
-                        <td>{p.author}</td>
-                        <td><img src={p.cover} alt="Cover"/></td>
-                        <td>{p.pages}</td>
-                        <td>{p.row || "-"}</td>
+        <div>
+            <h1 className="headline">Meine Bibliothek</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titel</th>
+                        <th>Autor*in</th>
+                        <th>Cover</th>
+                        <th>Seiten</th>
+                        <th>Reihe</th>
                     </tr>
-                ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {books?.map(p => (
+                        <tr key={p.id}>
+                            <td>{p.title}</td>
+                            <td>{p.author}</td>
+                            <td><img src={p.cover} alt="Cover"/></td>
+                            <td>{p.pages}</td>
+                            <td>{p.row || "-"}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 }
 

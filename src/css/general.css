@@ -75,20 +75,3 @@ a:active {
   color: #F2C14E;
 }
 
-.link{
-  color: #F2C14E;
-  border: none;
-  background: none;
-  font-size: 1rem;
-  text-decoration: underline;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-}
-.link:hover{
-  color: white;
-  border: none;
-  background: none;
-  font-size: 1rem;
-  text-decoration: underline;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-}
-
