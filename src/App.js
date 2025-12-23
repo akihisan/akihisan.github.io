@@ -1,17 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import "./css/general.css";
 import AllProjects from './components/AllProjects';
+import { useState } from 'react';
+import About from './components/About';
+import Table from './components/myLibrary/Table';
 
 function App() {
+  const [page, setPage] = useState("projects");
+
   return (
     <div className="App">
       {/* Header */}
         <div className="header">
-            <a href="index.html" className="button-style">Projekte</a>
-            <a href="pages/about.html" className="button-style">Über</a>
+            <button className="button-style" onClick={() => setPage("projects")}>Projekte</button>
+            <button className="button-style" onClick={() => setPage("about")}>Über</button>
         </div>
-        <AllProjects/>
+        {page === "projects" && <AllProjects setPage={setPage}/>}
+        {page === "about" && <About/>}
+        {page === "library" && <Table/>}
     </div>
   );
 }
