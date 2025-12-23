@@ -27,7 +27,7 @@ function Table() {
                         <td>{p.author}</td>
                         <td><img src={p.cover} alt="Cover"/></td>
                         <td>{p.pages}</td>
-                        <td>{p.row}</td>
+                        <td>{p.row || "-"}</td>
                     </tr>
                 ))}
             </tbody>
