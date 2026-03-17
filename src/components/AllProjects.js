@@ -42,7 +42,7 @@ function AllProjects({setPage}){
     return(<>
         <h1>Meine Projekte</h1>
         <div class="allProjects">
-
+            
             <Project title="Meine Bibliothek" media={media.lib}>
                 <a href={`${process.env.PUBLIC_URL}/#/library`} target="_blank" rel="noopener noreferrer">"Meine Bibliothek"</a> ist eine Webseite, 
                 welche aktuell als privates Projekt von mir erstellt wird.<br/>

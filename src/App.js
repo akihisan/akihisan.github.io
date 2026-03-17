@@ -13,6 +13,7 @@ function AppContent(){
 
   const location = useLocation();
   const isLibrary = location.pathname === "/library";
+  const isMordor = location.pathname === "/mordor";
 
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function AppContent(){
           <button className="button-style" onClick={() => setPage("projects")}>Projekte</button>
           <button className="button-style" onClick={() => setPage("about")}>Über</button>
         </div>}
-        {!isLibrary && page === "projects" && <AllProjects setPage={setPage}/>}
+        {!(isLibrary || isMordor) && page === "projects" && <AllProjects setPage={setPage}/>}
         {page === "about" && <About/>}
         <Routes>
           <Route path="/library" element={<Library/>} />
