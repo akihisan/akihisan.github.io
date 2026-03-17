@@ -4,10 +4,12 @@ import { useState } from "react";
 
 function Library(){
     const [view, setView] = useState("table");
+    const [isDarkmode, setIsDarkmode] = useState(false);
 
     return (
         <div>
-            {view === "table" && <Table/>}
+            <button onClick={() => setIsDarkmode(!isDarkmode)}>toggle darkmode</button>
+            {view === "table" && <Table isDarkmode={isDarkmode}/>}
             {view === "shelf" && <Shelf/>}
         </div>
     );

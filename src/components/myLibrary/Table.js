@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../../css/myLibrary/table.css";
 
-function Table() {
+function Table({isDarkmode}) {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
@@ -13,8 +13,8 @@ function Table() {
     return (
         <div>
             <h1 className="headline">Meine Bibliothek</h1>
-            <table>
-                <thead>
+            <table className={`text-${isDarkmode ? "darkmode" : "lightmode"}`}>
+                <thead className={`background-${isDarkmode ? "darkmode" : "lightmode"}`}>
                     <tr>
                         <th>Titel</th>
                         <th>Autor*in</th>
@@ -23,7 +23,7 @@ function Table() {
                         <th>Reihe</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className={`background-${isDarkmode ? "darkmode" : "lightmode"}`}>
                     {books?.map(p => (
                         <tr key={p.id}>
                             <td>{p.title}</td>
