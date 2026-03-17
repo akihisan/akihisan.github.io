@@ -26,7 +26,7 @@ function AppContent(){
         {page === "about" && <About/>}
         <Routes>
           <Route path="/library" element={<Library/>} />
-          <Route pathe="/mordor" element={<Mordor/>} />
+          <Route path="/mordor" element={<Mordor/>} />
         </Routes>
     </div>
   );
