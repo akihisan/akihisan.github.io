@@ -18,7 +18,7 @@ function AppContent(){
   return (
     <div className="App">
       {/* Header */}
-        {!isLibrary && <div className="header">
+        {!(isLibrary || isMordor) && <div className="header">
           <button className="button-style" onClick={() => setPage("projects")}>Projekte</button>
           <button className="button-style" onClick={() => setPage("about")}>Über</button>
         </div>}
