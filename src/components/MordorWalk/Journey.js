@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function Journey(){
-    const goal = 2700; //km
+    const goal = localStorage.goal || 2700; //km
     const [current, setCurrent] = useState(0); //km
     const [completed, setCompleted] = useState(0); //%
 

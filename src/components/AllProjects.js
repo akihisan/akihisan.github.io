@@ -43,13 +43,13 @@ function AllProjects({setPage}){
         <h1>Meine Projekte</h1>
         <div class="allProjects">
             
-            <Project title="Meine Bibliothek" media={media.lib}>
+            {/*<Project title="Meine Bibliothek" media={media.lib}>
                 <a href={`${process.env.PUBLIC_URL}/#/library`} target="_blank" rel="noopener noreferrer">"Meine Bibliothek"</a> ist eine Webseite, 
                 welche aktuell als privates Projekt von mir erstellt wird.<br/>
                 Dort werden Daten zu einigen Büchern, die ich gelesen habe, aus einer JSON geholt und in einer Tabelle angezeigt.<br/>
                 <b>Framework:</b> React<br/>
                 <b>Programmiersprachen:</b> JavaScript, HTML, CSS
-            </Project>
+            </Project>*/}
 
             <Project title="The Other" media={media.other}>
                 <a href="https://rivsastoria.itch.io/the-other" target="_blank" rel="noreferrer">"The Other"</a> entstand 2025 in einer 
