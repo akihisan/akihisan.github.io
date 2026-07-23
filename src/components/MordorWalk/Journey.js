@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 
-function Journey(){
+function Journey({data}){
     const goal = localStorage.goal || 2700; //km
     const [current, setCurrent] = useState(0); //km
     const [completed, setCompleted] = useState(0); //%
-
-    //Daten aus localStorage holen
-    const data = JSON.parse(localStorage.getItem("stepData"));
 
     useEffect(() => {
         //alle Schritte addieren
@@ -23,6 +20,7 @@ function Journey(){
         //Fortschritt in Prozent berechnen
         const percent = km / goal * 100;
         setCompleted(percent);
+        drawProgress(percent);
     }, [data])
 
     //Hilfsfunktion auf 2 Nachkommastellen runden
@@ -31,10 +29,20 @@ function Journey(){
         return Math.round((value + Number.EPSILON) * factor) / factor;
     }
 
+    //Fortschrittsbalken zeichnen
+    function drawProgress(progress){
+        const bar = document.getElementById("progressBar");
+        bar.style.width = `${progress}%`;
+    }
+
     return(
         <div>
+            {roundTo2(current)}km gelaufen.<br/>
             Noch {roundTo2(goal - current)}km übrig bis Mordor.<br/>
             Fortschritt: {roundTo2(completed)}%
+            <div id="progressBarBG">
+                <div id="progressBar"></div>
+            </div>
         </div>
     );
 }
